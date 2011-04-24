@@ -1,0 +1,12 @@
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#splash {
+  width: 652px;
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
