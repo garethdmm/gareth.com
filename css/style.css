@@ -1,9 +1,3 @@
-/*div#gm-base {
-  width: 941px;
-  margin-left: auto;  
-  margin-right: auto;
-}*/
-
 div#gm-splash {
   margin-top: 150px;
   width: 653px;
@@ -61,6 +55,42 @@ div#gm-content {
 
 .gm-content-pane ul {
   margin: 10px;
+}
+
+.gm-content-pane ul li {
+  display: inline;
+  margin-right: 34px;
+}
+
+li#amp {
+  margin-left: 57px;
+  margin-right: 0px;
+}
+
+li#amp img, li#seven img {
+  margin-top: 15px;
+}
+
+li#seven {
+  margin-left: 92px;
+}
+
+li#primal {
+  margin-left: 111px;
+}
+
+li#primal img {
+  margin-top: 15px;
+}
+
+li#gmail {
+  display: block;
+  margin-left: 139px;
+}
+
+.gm-content-pane ul li img {
+  height: 100px;
+  width: auto;
 }
 
 a.tip-able {
