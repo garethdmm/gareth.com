@@ -1,0 +1,87 @@
+/*div#gm-base {
+  width: 941px;
+  margin-left: auto;  
+  margin-right: auto;
+}*/
+
+div#gm-splash {
+  margin-top: 150px;
+  width: 653px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img#gm-headline {
+  margin-bottom: 14px;
+}
+
+ul#gm-nav {
+  display: inline;
+  float: left;
+  width: 33%;
+  height: 280px;
+}
+
+ul#gm-nav li {
+  height: 53px;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+ul#gm-nav li a {
+  vertical-align: center;
+}
+
+ul#gm-nav a, ul#gm-nav a:visited {
+  color: black;
+  text-decoration: none;
+  font-size: 36pt;
+}
+
+div#gm-content {
+  display: inline;
+  float: right;
+  width: 66%;
+  height: 242px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.gm-content-pane {
+  margin: 10px;
+}
+
+.gm-content-pane a, .gm-content-pane a:visited {
+  color: #34282C; 
+  text-decoration: underline;
+}
+
+.gm-content-pane ul {
+  margin: 10px;
+}
+
+a.tip-able {
+  cursor: pointer;
+}
+
+/* simple css-based tooltip */
+.tooltip {
+  background-color:#fff;
+  border:1px solid #000;
+  padding:10px 15px;
+  width:200px;
+  display:none;
+
+  /* text styling */
+  color:#000;
+  text-align:left;
+  font-size:16px;
+  line-height: 1.5;
+
+  /* outline radius for mozilla/firefox only */
+  -moz-box-shadow:0 0 10px #000;
+  -webkit-box-shadow:0 0 10px #000;
+}
