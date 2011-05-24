@@ -99,10 +99,10 @@ a.tip-able {
 
 /* simple css-based tooltip */
 .tooltip {
-  background-color:#fff;
-  border:1px solid #000;
+  background-color:#eee;
+  border:1px solid #fff;
   padding:10px 15px;
-  width:200px;
+  max-width: 400px;
   display:none;
 
   /* text styling */
