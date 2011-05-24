@@ -1,3 +1,5 @@
+import os
+
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 
@@ -29,16 +31,35 @@ class ContactHandler(webapp.RequestHandler):
   def get(self):
     showPage(self, "contact")
 
+class ResumeHandler(webapp.RequestHandler):
+  def get(self):
+    f = open('resume.html')
+    html = f.read()
+    self.response.out.write(html)
 
-appRoute = webapp.WSGIApplication( [
-  ('/', HomeHandler),
-  ('/projects', ProjectsHandler),
-  ('/work', WorkHandler),
-  ('/contact', ContactHandler),
-], debug=True)
+applications = {
+  'www.garethmacleod.com': webapp.WSGIApplication( [
+    ('/', HomeHandler),
+    ('/projects', ProjectsHandler),
+    ('/work', WorkHandler),
+    ('/contact', ContactHandler),
+    ('/resume', ResumeHandler),
+  ], debug=True),
+  'resume.garethmacleod.com': webapp.WSGIApplication( [
+    ('/', ResumeHandler),
+  ], debug=True),
+  'localhost:8080': webapp.WSGIApplication( [
+    ('/', HomeHandler),
+    ('/projects', ProjectsHandler),
+    ('/work', WorkHandler),
+    ('/contact', ContactHandler),
+    ('/resume', ResumeHandler),
+  ], debug=True),
+}
+  
 
 def main():
-  run_wsgi_app(appRoute)
+  run_wsgi_app(applications[os.environ['HTTP_HOST']])
 
 if __name__ == '__main__':
   main()
