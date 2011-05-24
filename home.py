@@ -39,7 +39,7 @@ class ResumeHandler(webapp.RequestHandler):
 
 applications = {
   'www.garethmacleod.com': webapp.WSGIApplication( [
-    ('/', HomeHandler),
+    ('/', WorkHandler),
     ('/projects', ProjectsHandler),
     ('/work', WorkHandler),
     ('/contact', ContactHandler),
@@ -49,7 +49,7 @@ applications = {
     ('/', ResumeHandler),
   ], debug=True),
   'localhost:8080': webapp.WSGIApplication( [
-    ('/', HomeHandler),
+    ('/', WorkHandler),
     ('/projects', ProjectsHandler),
     ('/work', WorkHandler),
     ('/contact', ContactHandler),
